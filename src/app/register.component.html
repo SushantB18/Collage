@@ -1,0 +1,78 @@
+<section class="Form my-4 mx-5">
+  <div class="container-fluid">
+    <div class="row no-gutters">
+      <!-- <div class="row" style="height: 100vh">-->
+      <!-- Left Block bg-warning d-flex flex-column justify-content-center align-items-center-->
+
+      <!--<div>
+        <fa-icon [icon]="faAirFreshener" style="font-size: 54px"></fa-icon>
+      </div>
+      <div class="h3">Welcome to my Appplication</div>
+      <div class="h6">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid,
+        harum!
+      </div>
+    </div>-->
+      <div class="col-lg-5 d-flex align-items-center justify-content-center">
+        <img src="https://picsum.photos/600/750?grayscale" class="img-fluid" alt="">
+        <div class="h3 text-light d-flex align-items-center text-align: center;" style="position: absolute; top: 50%; bottom: 50%; " >Collage Maker</div>
+      </div>
+
+      <!-- Right Blockd-flex flex-column justify-content-center align-items-center -->
+
+      <div class=" col-lg-7 px-5 pt-5 bg-light " [formGroup]="fbFormGroup">
+        <div class="alert alert-danger" role="alert" *ngIf="uiInvalidCredential">
+          A simple danger alert—check it out!
+        </div>
+
+        <!-- <div class="h4">Application Login</div>-->
+        <h1 class="font-weight-bold mb-2">Register Here</h1>
+
+
+        <!--<div>
+        <input type="text" placeholder="Enter Username" class="form-control my-3 p-4" formControlName="username" / Done>
+      </div>-->
+        <div class="col-lg-7">
+          <input type="text" placeholder="Enter Username" class="form-control my-3 p-4" formControlName="username" />
+        </div>
+
+
+        <!--<div class="mt-1">
+        <input type="password" placeholder="Enter Password" class="form-control my-3 p-4" formControlName="password" / Done>
+      </div>-->
+        <div class="col-lg-7">
+          <input type="password" placeholder="Enter Password" class="form-control my-3 p-4"
+            formControlName="password" />
+        </div>
+
+        <div class="col-lg-7">
+          <input type="email" placeholder="Enter Email address" class="form-control my-3 p-4"
+            formControlName="email" />
+        </div>
+
+        <div class="col-lg-7">
+          <input type="text" placeholder="Enter Mobile no." class="form-control my-3 p-4"
+            formControlName="mobile" />
+        </div>
+
+
+
+        <!-- <button class="btn btn-sm btn-warning mt-2 mb-2" [disabled]="!fbFormGroup.valid" (click)="loginProcessHere()" Done>
+        Login Here
+      </button> -->
+        <button type="button" class="btn1 mt-3 mb-3" [disabled]="!fbFormGroup.valid" (click)="registerHere()" style="border: none;
+      outline: none;
+      height: 50px;
+      width: 58%;
+      background-color: black;
+      color: white;
+      border-radius: 4px;
+      font-weight: bold;">Register</button>
+        <!--<a routerLink="/register">Register Here</a>-->
+        <p>Already have an account? <a routerLink="/login">Login Here</a></p>
+      </div>
+
+    </div>
+  </div>
+
+</section>
