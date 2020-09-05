@@ -1,0 +1,49 @@
+<section class="Form my-4 mx-5">
+  <div class="container-fluid">
+      <div class="row no-gutters">
+
+          <div class="col-lg-5">
+              <img src="https://picsum.photos/600/750?grayscale" class="img-fluid" alt="">
+          </div>
+
+          <!-- Right Blockd-->
+
+          <div class=" col-lg-7 px-5 pt-5 bg-light " [formGroup]="fbFormGroup">
+              <div class="alert alert-danger" role="alert" *ngIf="uiInvalidCredential">
+                  In-valid Username or Password
+              </div>
+
+
+              <h1 class="font-weight-bold mb-2">CollageMaker</h1>
+              <h4>Login In</h4>
+
+
+              <div class="col-lg-7">
+                  <input type="text" placeholder="Enter Username" class="form-control my-3 p-4"
+                      formControlName="username" />
+              </div>
+
+
+
+              <div class="col-lg-7">
+                  <input type="password" placeholder="Enter Password" class="form-control my-3 p-4"
+                      formControlName="password" />
+              </div>
+
+
+              <button type="button" class="btn1 mt-3 mb-3" style="border: none;
+      outline: none;
+      height: 50px;
+      width: 58%;
+      background-color: black;
+      color: white;
+      border-radius: 4px;
+      font-weight: bold;" [disabled]="!fbFormGroup.valid" (click)="loginProcessHere()">Login</button>
+
+              <p>Don't have an account? <a routerLink="/register">Register Here</a></p>
+          </div>
+
+      </div>
+  </div>
+
+</section>
